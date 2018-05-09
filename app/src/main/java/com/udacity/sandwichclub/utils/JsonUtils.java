@@ -28,7 +28,6 @@ public class JsonUtils {
                 ArrayList<String> aliases = new ArrayList<>();
                 for (int i = 0; i < alsoKnownAs.length(); i++) {
                     aliases.add(alsoKnownAs.getString(i));
-
                 }
                 sandwich.setAlsoKnownAs(aliases);
             }
@@ -41,7 +40,6 @@ public class JsonUtils {
 
             // Extract image
             sandwich.setImage(jsonSandwich.getString("image"));
-
 
             // Extract ingredients
             JSONArray jsonIngredients = jsonSandwich.getJSONArray("ingredients");
