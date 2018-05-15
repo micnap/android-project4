@@ -12,7 +12,6 @@ import com.udacity.sandwichclub.model.Sandwich;
 import com.udacity.sandwichclub.utils.JsonUtils;
 
 import org.json.JSONException;
-import org.w3c.dom.Text;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -60,7 +59,6 @@ public class DetailActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
     }
 
     private void closeOnError() {
@@ -79,7 +77,7 @@ public class DetailActivity extends AppCompatActivity {
         // Set the values of the textviews.
         origin.setText(sandwich.getPlaceOfOrigin());
         description.setText(sandwich.getDescription());
-
+        
         int numAliases = sandwich.getAlsoKnownAs().size();
         for (int i = 0; i < numAliases; i++) {
             alias.append(sandwich.getAlsoKnownAs().get(i));
